@@ -21,10 +21,6 @@ body {
     scrollbar-width: none;  /* Firefox */
   }
 
-/* img {
-    max-width: 100%;
-  } */
-
 #hamnav {
     width: 100%;
     background: #f72585;
@@ -281,7 +277,75 @@ button {
 }
 
 
+/* ABOUT CSS */
+
+.about-heading {
+    grid-column: 1 / -1;
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    grid-gap: 20px;
+    align-items: center;
+    padding: 50px 0;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 3rem;
+}
+
+.about-heading:before {
+    display: block;
+    content: '';
+    height: 10px;
+    background-image: linear-gradient(to right, rgba(255,0,0,0), rgb(255, 196, 0));
+}
+
+.about-heading:after {
+    display: block;
+    content: '';
+    height: 10px;
+    background-image: linear-gradient(to left, rgba(255,0,0,0), rgb(255, 196, 0));
+}
+
+.main {
+    padding: 40px;
+}
+.content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-bottom: 50px;
+}
+
+.rightOne {
+    width: 600px;
+}
+
+.rightOne > h3 {
+    font-size: 2rem;
+}
+
+.leftOne img {
+    width: 600px;
+}
+
+.leftTwo {
+    width: 600px;
+    /* order: 1; */
+}
+
+.leftTwo > h3 {
+    font-size: 2rem;
+}
+
+.rightTwo img {
+    width: 600px;
+    height: 400px;
+    object-fit: cover;
+}
+
 /* LOCATION CSS */
+
 .topLocation {
     text-align: center;
     margin-top: 20px;
@@ -454,6 +518,12 @@ footer > h2:after {
 
 /* MEDIA QUERIES */
 
+@media (max-width: 1200px) {
+    .leftTwo {
+        order: 1;
+    }
+}
+
 @media (max-width: 700px) {
     .top {
         grid-template-areas:
@@ -478,7 +548,6 @@ footer > h2:after {
         box-sizing: border-box;
         display: block;
         width: 100%;
-        border-top: 1px solid #333;
       }
     
       #hamitems { display: none; 
@@ -501,6 +570,31 @@ footer > h2:after {
         border-radius: 50%;
         object-fit: cover;
         object-position: center;
+    }
+
+    .rightOne {
+        width: 500px;
+    }
+    
+    .rightOne > h3 {
+        font-size: 1.5rem;
+    }
+    
+    .leftOne img {
+        width: 500px;
+    }
+
+    .leftTwo {
+        width: 500px;
+    }
+    
+    .leftTwo > h3 {
+        font-size: 1.5rem;
+    }
+    
+    .rightTwo img {
+        width: 500px;
+        height: 350px;
     }
 
     footer > h2 {
@@ -556,5 +650,30 @@ footer > h2:after {
 
     .city {
         font-size: 1.5rem;
+    }
+
+    .rightOne {
+        width: 300px;
+    }
+    
+    .rightOne > h3 {
+        font-size: 1rem;
+    }
+    
+    .leftOne img {
+        width: 300px;
+    }
+
+    .leftTwo {
+        width: 300px;
+    }
+    
+    .leftTwo > h3 {
+        font-size: 1rem;
+    }
+    
+    .rightTwo img {
+        height: 200px;
+        width: 300px;
     }
 }
